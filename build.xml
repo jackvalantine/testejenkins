@@ -7,8 +7,7 @@
     <property name="application.tests" value="${project.basedir}/tests"/>
     <property name="application.builddir" value="${project.basedir}/build"/>
 
-    <target name="build"
-        depends="prepare,lint,phploc,phpcs,phpcpd,phpdoc,phpunit,phpcb"/>
+    <target name="build" depends="prepare,lint,phploc"/>
 
     <target name="clean" description="Limpa os diretórios de artefatos">
         <delete dir="${application.builddir}/api"/>
@@ -67,7 +66,7 @@
             </fileset>
             <formatter type="xml" outfile="${application.builddir}/logs/pmd.xml"/>
         </phpmd>
-    </target>-->
+    </target>
 
    <target name="phpcs" description="Testa o padrão de codificação">
        <phpcodesniffer
@@ -147,5 +146,5 @@
             <arg value="--output" />
             <arg path="${application.builddir}/code-browser" />
         </exec>
-    </target>
+    </target> -->
 </project>
