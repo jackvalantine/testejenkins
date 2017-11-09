@@ -139,12 +139,13 @@
 
     <target name="phpcb" description="Cria a navegação de código">
         <exec executable="phpcb">
-            <arg value="--log" />
+            <arg value="log" />
             <arg path="${application.builddir}/logs" />
-            <arg value="--source" />
+            <arg value="source" />
             <arg path="${application.library}" />
-            <arg value="--output" />
+            <arg value="output" />
             <arg path="${application.builddir}/code-browser" />
         </exec>
-    </target> -->
+    </target>-->
+   
 </project>
